@@ -1,0 +1,96 @@
+body {
+  text-align: center;
+}
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.game {
+  /* display: flex;
+  flex-direction: column; */
+
+  /* position: relative; */
+  border-radius: 20px;
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  margin-top: 50px;
+
+  background: url(img/background.jpg) center/cover no-repeat;
+}
+
+.game_header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+}
+
+.game__button {
+  margin: auto;
+  margin-bottom: 0.7rem;
+  font-size: 1.4rem;
+  transition: transfrom 300ms ease-in;
+}
+
+.game__button:hover {
+  /* 키우는 것 */
+  transform: scale(1.1);
+}
+
+.game__timer {
+  font-size: 1.6rem;
+  background-color: white;
+  border-radius: 10px;
+  border: 4.5px solid black;
+  width: 85px;
+  margin: auto;
+  user-select: none;
+}
+
+.game__score {
+  font-size: 1.7rem;
+  user-select: none;
+}
+
+.game__field {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  /* 당근이 집위에 나타나면 안돼 ㅎㅎ */
+}
+
+.pop-up {
+  border-radius: 20px;
+  width: 25rem;
+  padding: 2rem;
+  margin: auto;
+  background-color: #00000090;
+  color: white;
+  transform: translateY(-165%);
+}
+
+.pop-up-hide {
+  display: none;
+}
+
+.pop-up-refresh {
+  display: block;
+  margin: auto;
+  font-size: 4rem;
+}
+
+.pop-up-message {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: 0.3rem;
+}
+.bear:hover,
+.ice3:hover,
+.ice5:hover {
+  transform: scale(1.1);
+}
