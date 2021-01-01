@@ -5,42 +5,29 @@ const fieldRect = field.getBoundingClientRect();
 const gameBtn = document.querySelector('.game__button');
 const gameScore = document.querySelector('.game__score');
 const imgPopUp = document.querySelector('.img-pop-up');
-
-
 const Angry = document.querySelector('.angry');
-
 const timerIndicator = document.querySelector('.game__timer');
 const popUp = document.querySelector('.pop-up');
 const popUpMsg = document.querySelector('.pop-up-message');
 const popUpCtn = document.querySelector('.pop-up-refresh');
 const gameLevel = document.querySelector('.game_level');
 
-
-
-console.log(popUpCtn);
-
 const BEAR_COUNT = 5;
 const LESS_ICE_COUNT = 3;
 const SMALL_ICE_COUNT = 5;
 const ICE_COUNT = 10;
+const Babam = new Audio('./sound/Babam.mp3');
+const buk = new Audio('./sound/buk.mp3');
+const click = new Audio('./sound/click.mp3');
+const sigh = new Audio('./sound/sigh.mp3');
+const start = new Audio('./sound/Arrival.mp3');
 
 let SET_GAME_SEC = 20;
-
 let BEAR_COUNTS = 5;
 let LEVEL = 7;
 let started = false;
 let score = 0;
 let timer = undefined;
-const Babam = new Audio('./sound/Babam.mp3');
-const buk = new Audio('./sound/buk.mp3');
-const click = new Audio('./sound/click.mp3');
-const bubble = new Audio('./sound/bubble.mp3');
-const sigh = new Audio('./sound/sigh.mp3');
-const s1 = new Audio('./sound/campfire.mp3');
-const s2 = new Audio('./sound/Hammock Fight.mp3');
-const s3 = new Audio('./sound/Sneaky Snitch.mp3');
-const start = new Audio('./sound/Arrival.mp3');
-const s5 = new Audio('./sound/banana.mp3');
 
 function initGame() {
     score = 0;
@@ -249,8 +236,6 @@ function showStopButton() {
     icon.classList.remove('fa-play');
     icon.classList.add('fa-stop');
     gameBtn.style.visibility = 'visible';
-    // console.log(icon);
-
 }
 
 function showTimerAndScore() {
@@ -386,6 +371,4 @@ function finishGame(win) {
 
 function showAngryBear() {
     Angry.classList.remove('angry-hide');
-    console.log(Angry);
-
 }
