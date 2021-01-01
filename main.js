@@ -367,8 +367,7 @@ function finishGame(win) {
     }
 
     hideGameButton();
-    stopGameTimer(); // 25. 영원한 버그에 걸려 -> 꼭 타이머 종료해줘야해~~
-    //   stopSound(bgSound); // 24 끝났을떄도 소리 없애줘
+    stopGameTimer();
 }
 
 function showAngryBear() {
