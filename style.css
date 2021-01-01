@@ -266,3 +266,12 @@ button {
     height: 85px;
   }
 }
+
+.copyright {
+  font-size: 0.5rem;
+  /* text-align: left; */
+}
+.title {
+  margin: 1rem 0;
+  font-size: 0.7rem;
+}

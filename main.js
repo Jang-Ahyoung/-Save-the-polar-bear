@@ -24,7 +24,7 @@ const start = new Audio('./sound/Arrival.mp3');
 
 let SET_GAME_SEC = 20;
 let BEAR_COUNTS = 5;
-let LEVEL = 7;
+let LEVEL = 1;
 let started = false;
 let score = 0;
 let timer = undefined;
