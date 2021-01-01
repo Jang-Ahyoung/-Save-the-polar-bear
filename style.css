@@ -112,6 +112,13 @@ button {
 .moving_ice,
 .random_ice {
   transition: transform 300ms ease;
+  width: 72px;
+  height: 72px;
+}
+
+.ice {
+  width: 54px;
+  height: 54px;
 }
 
 .bear:hover,

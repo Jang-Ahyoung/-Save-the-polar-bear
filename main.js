@@ -24,7 +24,7 @@ const start = new Audio('./sound/Arrival.mp3');
 
 let SET_GAME_SEC = 20;
 let BEAR_COUNTS = 5;
-let LEVEL = 1;
+let LEVEL = 6;
 let started = false;
 let score = 0;
 let timer = undefined;
@@ -48,7 +48,7 @@ function initGame() {
         case 2:
             addItem('moving_ice', LESS_ICE_COUNT, 'img/ice1.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('ice5', ICE_COUNT, 'img/ice5.png');
+            addItem('ice', ICE_COUNT, 'img/ice5.png');
             break;
 
         case 3:
@@ -69,7 +69,7 @@ function initGame() {
         case 5:
             BEAR_COUNTS = BEAR_COUNT * 2;
             addItem('shaking_bear', BEAR_COUNT, 'img/main_bear.png');
-            addItem('ice1', ICE_COUNT, 'img/ice2.png');
+            addItem('ice', ICE_COUNT, 'img/ice2.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
             addItem('moving_ice', SMALL_ICE_COUNT, 'img/ice5.png');
             break;
@@ -350,10 +350,12 @@ function finishGame(win) {
         playSound(Babam);
         showPopUpNextStage('YOU WON 🎉');
 
-    } else if (LEVEL == 6 || LEVEL == 12 || LEVEL == 18) {
-        stopSound(start);
-        showPopUpWithText('Thank you 🎅');
-    } else {
+    }
+    // else if (LEVEL == 6 || LEVEL == 12 || LEVEL == 18) {
+    //     stopSound(start);
+    //     showPopUpWithText('Thank you 🎅');
+    // }
+    else {
         stopSound(start);
         playSound(sigh);
         showAngryBear();
