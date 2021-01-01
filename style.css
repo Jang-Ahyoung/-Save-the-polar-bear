@@ -117,7 +117,7 @@ button {
 }
 
 .ice,
-.moving_ice {
+.small_moving_ice {
   width: 54px;
   height: 54px;
 }
@@ -131,7 +131,9 @@ button {
   transform: scale(1.1);
   cursor: pointer;
 }
-
+.small_moving_ice {
+  animation: moving_ice 4s ease-in Infinite Alternate;
+}
 .moving_ice {
   width: 75px;
   height: 80px;

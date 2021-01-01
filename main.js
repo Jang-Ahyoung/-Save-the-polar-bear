@@ -80,7 +80,7 @@ function initGame() {
             addItem('bear', BEAR_COUNT, 'img/main_bear.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
             addItem('ice', ICE_COUNT, 'img/ice1.png');
-            addItem('moving_ice', SMALL_ICE_COUNT, 'img/ice3.png');
+            addItem('small_moving_ice', SMALL_ICE_COUNT, 'img/ice3.png');
             break;
 
         case 7:
@@ -351,10 +351,10 @@ function finishGame(win) {
         showPopUpNextStage('YOU WON 🎉');
 
     }
-    // else if (LEVEL == 6 || LEVEL == 12 || LEVEL == 18) {
-    //     stopSound(start);
-    //     showPopUpWithText('Thank you 🎅');
-    // }
+    else if (LEVEL == 18) {
+        stopSound(start);
+        showPopUpWithText('Thank you 🎅');
+    }
     else {
         stopSound(start);
         playSound(sigh);
