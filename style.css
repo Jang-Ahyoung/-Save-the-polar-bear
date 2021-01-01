@@ -96,13 +96,9 @@ button {
   margin: 0;
   margin-top: 0.3rem;
 }
-.bear:hover,
-.bear2:hover,
-.ice1:hover,
-.ice3:hover,
-.ice5:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+
+.fa-chevron-circle-right {
+  color: white;
 }
 
 .angry {
@@ -117,6 +113,98 @@ button {
   display: none;
 }
 
+.bear,
+.slide_bear,
+.shaking_bear,
+.ice,
+.moving_ice,
+.random_ice {
+  transition: transform 300ms ease;
+}
+
+.bear:hover,
+.slide_bear:hover,
+.shaking_bear:hover,
+.ice:hover,
+.moving_ice:hover,
+.random_ice:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.moving_ice {
+  width: 75px;
+  height: 80px;
+  animation: moving_ice 4s ease-in Infinite Alternate;
+}
+
+.random_ice {
+  width: 75px;
+  height: 80px;
+  animation: random_ice 4s ease-in Infinite Alternate;
+}
+
+.slide_bear {
+  animation: slidein 1.5s;
+}
+.shaking_bear {
+  animation: shakingbear 1.5s infinite;
+}
+
+@keyframes slidein {
+  from {
+    left: 90%;
+  }
+
+  25% {
+    /* left: 50%; */
+  }
+
+  75% {
+    /* font-size: 300%; */
+    /* margin-left: 10%; */
+  }
+
+  to {
+    /* margin-left: 0%; */
+  }
+}
+
+@keyframes shakingbear {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  20% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  30% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  40% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+}
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -154,25 +242,27 @@ button {
   }
 }
 
-@keyframes ice1 {
+@keyframes moving_ice {
   0% {
-    /* top: 0px; */
+    top: 0px;
   }
   95% {
     width: 100px;
   }
   to {
-    top: 10px;
-    width: 115px;
-    height: 90px;
+    top: 200px;
+    width: 85px;
+    height: 85px;
   }
 }
 
-.ice1 {
-  /* position: relative; */
-  left: 100px;
-  top: 0;
-  width: 100px;
-  height: 100px;
-  animation: ice1 4s ease-in Infinite Alternate;
+@keyframes random_ice {
+  95% {
+    width: 100px;
+  }
+  to {
+    top: 200px;
+    width: 85px;
+    height: 85px;
+  }
 }
