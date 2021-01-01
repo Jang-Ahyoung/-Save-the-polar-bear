@@ -10,30 +10,22 @@ button {
 }
 
 .game {
-  /* display: flex;
-  flex-direction: column; */
-
-  /* position: relative; */
   border-radius: 20px;
-  width: 800px;
-  height: 500px;
+  /* width: 100vh; */
+  max-width: 800px;
+  height: 31.25rem;
   margin: auto;
   margin-top: 50px;
-
-  background: url(img/background.jpg) center/cover no-repeat;
+  background: url(img/background.jpg) center/cover;
+  /* /cover no-repeat; */
 }
 
 .game_header {
   display: flex;
+  max-width: 800px;
+
   flex-direction: column;
   padding-top: 2.5rem;
-}
-
-.game_level {
-  position: relative;
-  left: 21rem;
-  top: -7.2rem;
-  user-select: none;
 }
 
 .game__button {
@@ -274,4 +266,49 @@ button {
 .title {
   margin: 1rem 0;
   font-size: 0.7rem;
+}
+
+.game_level {
+  /* margin: auto; */
+  position: absolute;
+  /* left: 0rem; */
+  /* right: 1rem; */
+  left: 57.5rem;
+  /* top: -7.2rem;
+   */
+  user-select: none;
+}
+@media screen and (max-width: 1280px) {
+  .game_level {
+    /* right: 0; */
+    left: 57.5rem;
+  }
+}
+@media screen and (max-width: 1204px) {
+  .game_level {
+    left: 56rem;
+  }
+}
+@media screen and (max-width: 1155px) {
+  .game_level {
+    left: 54rem;
+  }
+}
+@media screen and (max-width: 1093px) {
+  .game_level {
+    left: 80%;
+  }
+}
+@media screen and (max-width: 955px) {
+  .game_level {
+    position: absolute;
+    left: 85%;
+  }
+}
+@media screen and (max-width: 852px) {
+  .game_level {
+    position: absolute;
+    right: 1rem;
+    left: 83%;
+  }
 }
