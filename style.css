@@ -29,6 +29,13 @@ button {
   padding-top: 2.5rem;
 }
 
+.game_level {
+  position: relative;
+  left: 21rem;
+  top: -7.2rem;
+  user-select: none;
+}
+
 .game__button {
   margin: auto;
   margin-bottom: 0.7rem;
@@ -60,7 +67,7 @@ button {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-top: 40px;
+  margin-top: 30px;
   /* 당근이 집위에 나타나면 안돼 ㅎㅎ */
 }
 
@@ -85,12 +92,87 @@ button {
 }
 
 .pop-up-message {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0;
   margin-top: 0.3rem;
 }
 .bear:hover,
+.bear2:hover,
+.ice1:hover,
 .ice3:hover,
 .ice5:hover {
   transform: scale(1.1);
+  cursor: pointer;
+}
+
+.angry {
+  position: relative;
+  top: -507.5px;
+  width: 200px;
+  animation: shake 1.5s;
+  transform: scale(2);
+}
+
+.angry-hide {
+  display: none;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+    transform: scale(2);
+  }
+}
+
+@keyframes ice1 {
+  0% {
+    /* top: 0px; */
+  }
+  95% {
+    width: 100px;
+  }
+  to {
+    top: 10px;
+    width: 115px;
+    height: 90px;
+  }
+}
+
+.ice1 {
+  /* position: relative; */
+  left: 100px;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  animation: ice1 4s ease-in Infinite Alternate;
 }
