@@ -42,7 +42,6 @@ function initGame() {
             BEAR_COUNTS = 5;
             addItem('ice', ICE_COUNT, 'img/ice3.png');
             addItem('slide_bear', BEAR_COUNT, 'img/main_bear.png');
-
             addItem('ice', LESS_ICE_COUNT, 'img/ice5.png');
             break;
 
@@ -73,7 +72,7 @@ function initGame() {
             addItem('shaking_bear', BEAR_COUNT, 'img/main_bear.png');
             addItem('ice', ICE_COUNT, 'img/ice2.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('moving_ice', SMALL_ICE_COUNT, 'img/ice5.png');
+            addItem('small_moving_ice', SMALL_ICE_COUNT, 'img/ice5.png');
             break;
 
         case 6:
@@ -81,7 +80,7 @@ function initGame() {
             BEAR_COUNTS = BEAR_COUNT * 2;
             addItem('bear', BEAR_COUNT, 'img/main_bear.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('ice', ICE_COUNT, 'img/ice1.png');
+            addItem('big_ice', ICE_COUNT, 'img/ice1.png');
             addItem('small_moving_ice', SMALL_ICE_COUNT, 'img/ice3.png');
             break;
 
@@ -96,7 +95,7 @@ function initGame() {
         case 8:
             addItem('moving_ice', LESS_ICE_COUNT, 'img/ice1.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('ice5', ICE_COUNT, 'img/ice5.png');
+            addItem('ice', ICE_COUNT, 'img/ice5.png');
             break;
 
         case 9:
@@ -118,9 +117,9 @@ function initGame() {
         case 11:
             BEAR_COUNTS = BEAR_COUNT * 2;
             addItem('shaking_bear', BEAR_COUNT, 'img/main_bear.png');
-            addItem('ice1', ICE_COUNT, 'img/ice2.png');
+            addItem('ice', ICE_COUNT, 'img/ice2.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('moving_ice', SMALL_ICE_COUNT, 'img/ice5.png');
+            addItem('small_moving_ice', SMALL_ICE_COUNT, 'img/ice5.png');
             break;
 
         case 12:
@@ -128,7 +127,7 @@ function initGame() {
 
             addItem('ice', ICE_COUNT, 'img/ice1.png');
             addItem('bear', BEAR_COUNT, 'img/main_bear.png');
-            addItem('bear', BEAR_COUNT, 'img/bear4.png');
+            addItem('big_bear', BEAR_COUNT, 'img/bear4.png');
             addItem('moving_ice', SMALL_ICE_COUNT, 'img/ice3.png');
             break;
         case 13:
@@ -142,7 +141,7 @@ function initGame() {
         case 14:
             addItem('moving_ice', LESS_ICE_COUNT, 'img/ice1.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('ice5', ICE_COUNT, 'img/ice5.png');
+            addItem('ice', ICE_COUNT, 'img/ice5.png');
             break;
 
         case 15:
@@ -165,17 +164,17 @@ function initGame() {
 
             BEAR_COUNTS = BEAR_COUNT * 2;
             addItem('shaking_bear', BEAR_COUNT, 'img/main_bear.png');
-            addItem('ice1', ICE_COUNT, 'img/ice2.png');
+            addItem('ice', ICE_COUNT, 'img/ice2.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('moving_ice', SMALL_ICE_COUNT, 'img/ice5.png');
+            addItem('small_moving_ice', SMALL_ICE_COUNT, 'img/ice5.png');
             break;
 
         case 18:
             BEAR_COUNTS = BEAR_COUNT * 2;
             addItem('bear', BEAR_COUNT, 'img/main_bear.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('ice', ICE_COUNT, 'img/ice1.png');
-            addItem('moving_ice', SMALL_ICE_COUNT, 'img/ice3.png');
+            addItem('big_ice', ICE_COUNT, 'img/ice1.png');
+            addItem('small_moving_ice', SMALL_ICE_COUNT, 'img/ice3.png');
             break;
 
         default:
@@ -322,7 +321,8 @@ function onFieldClick(event) {
         if (score === BEAR_COUNTS) {
             finishGame(true);
         }
-    } else if (target.matches('.ice') || target.matches('.moving_ice') || target.matches('.random_ice')) {
+
+    } else if (target.matches('.ice') || target.matches('.moving_ice') || target.matches('.random_ice') || target.matches('.small_moving_ice') || target.matches('.big_ice')) {
         playSound(buk);
         finishGame(false);
     }

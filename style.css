@@ -109,6 +109,7 @@ button {
 .slide_bear,
 .shaking_bear,
 .ice,
+.big_ice,
 .moving_ice,
 .random_ice {
   transition: transform 300ms ease;
@@ -126,14 +127,31 @@ button {
 .slide_bear:hover,
 .shaking_bear:hover,
 .ice:hover,
+.big_ice:hover,
+.small_moving_ice:hover,
 .moving_ice:hover,
 .random_ice:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 .small_moving_ice {
-  animation: moving_ice 4s ease-in Infinite Alternate;
+  animation: small_moving_ice 4s ease-in Infinite Alternate;
 }
+
+@keyframes small_moving_ice {
+  0% {
+    top: 0px;
+  }
+  95% {
+    width: 72px;
+  }
+  to {
+    top: 200px;
+    width: 54px;
+    height: 65px;
+  }
+}
+
 .moving_ice {
   width: 75px;
   height: 80px;
