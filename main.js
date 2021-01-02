@@ -40,7 +40,7 @@ function initGame() {
         case 1:
             SET_GAME_SEC = 20;
             BEAR_COUNTS = 5;
-            addItem('slide_bear', BEAR_COUNT, 'img/main_bear.png');
+            addItem('slide_bear', BEAR_COUNT, 'img/angry.png');
             addItem('ice', ICE_COUNT, 'img/ice3.png');
             addItem('ice', LESS_ICE_COUNT, 'img/ice5.png');
             break;
