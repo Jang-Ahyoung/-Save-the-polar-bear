@@ -356,11 +356,6 @@ button {
   }
 }
 @media screen and (max-width: 500px) {
-  .saveIcon {
-    padding: 0.2rem;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
   .Icon {
     padding: 0.2rem;
     width: 1.5rem;
@@ -372,7 +367,6 @@ button {
   .danger {
     padding: 0 0.3rem;
   }
-
   .pop-up {
     width: 15rem;
   }
