@@ -15,7 +15,7 @@ button {
   max-width: 800px;
   height: 31.25rem;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 10px;
   background: url(img/background.jpg) center/cover;
   /* /cover no-repeat; */
 }
@@ -153,22 +153,35 @@ button {
   animation: shakingbear 1.5s infinite;
 }
 
+.gameIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saveIcon {
+  padding: 0.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.Icon {
+  padding: 0.2rem;
+  width: 2rem;
+  height: 2rem;
+}
+.save {
+  margin-right: 3rem;
+}
+.danger {
+  padding: 0 1rem;
+}
+.gameOverIcon {
+  width: 2rem;
+  height: 2rem;
+}
 @keyframes slidein {
   from {
     left: 90%;
-  }
-
-  25% {
-    /* left: 50%; */
-  }
-
-  75% {
-    /* font-size: 300%; */
-    /* margin-left: 10%; */
-  }
-
-  to {
-    /* margin-left: 0%; */
   }
 }
 
@@ -326,6 +339,23 @@ button {
   }
 }
 @media screen and (max-width: 500px) {
+  .saveIcon {
+    padding: 0.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .Icon {
+    padding: 0.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .save {
+    margin-right: 1.5rem;
+  }
+  .danger {
+    padding: 0 0.3rem;
+  }
+
   .pop-up {
     width: 15rem;
   }
