@@ -15,16 +15,16 @@ const gameLevel = document.querySelector('.game_level');
 const BEAR_COUNT = 5;
 const LESS_ICE_COUNT = 3;
 const SMALL_ICE_COUNT = 5;
-const ICE_COUNT = 10;
+const ICE_COUNT = 7;
 const Babam = new Audio('./sound/Babam.mp3');
 const buk = new Audio('./sound/buk.mp3');
 const click = new Audio('./sound/click.mp3');
 const sigh = new Audio('./sound/sigh.mp3');
 const start = new Audio('./sound/Arrival.mp3');
 
-let SET_GAME_SEC = 20;
+let SET_GAME_SEC = 15;
 let BEAR_COUNTS = 5;
-let LEVEL = 1;
+let LEVEL = 11;
 let started = false;
 let score = 0;
 let timer = undefined;
@@ -38,86 +38,100 @@ function initGame() {
 
     switch (LEVEL) {
         case 1:
-            SET_GAME_SEC = 20;
             BEAR_COUNTS = 5;
-            addItem('ice', ICE_COUNT, 'img/ice3.png');
-            addItem('slide_bear', BEAR_COUNT, 'img/main_bear.png');
+            addItem('ice', SMALL_ICE_COUNT, 'img/ice3.png');
             addItem('ice', LESS_ICE_COUNT, 'img/ice5.png');
+            addItem('slide_bear', BEAR_COUNT, 'img/main_bear.png');
             break;
 
         case 2:
-            addItem('ice', ICE_COUNT, 'img/ice5.png');
+            addItem('ice', LESS_ICE_COUNT, 'img/ice5.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('moving_ice', LESS_ICE_COUNT, 'img/ice1.png');
+            addItem('small_moving_ice', 3, 'img/ice2.png');
 
             break;
 
         case 3:
-            BEAR_COUNTS = BEAR_COUNT * 2;
-            addItem('bear', BEAR_COUNTS, 'img/main_bear.png');
-            addItem('ice', SMALL_ICE_COUNT, 'img/ice2.png');
-            addItem('random_ice', SMALL_ICE_COUNT, 'img/ice1.png');
+            // BEAR_COUNTS = BEAR_COUNT * 2;
+
+            addItem('ice', 4, 'img/ice2.png');
+
+            addItem('ice', LESS_ICE_COUNT, 'img/ice3.png');
+            addItem('shaking_bear', BEAR_COUNTS, 'img/main_bear.png');
             break;
 
         case 4:
-            BEAR_COUNTS = BEAR_COUNT * 2;
-            addItem('bear', BEAR_COUNT, 'img/main_bear.png');
-            addItem('slide_bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('random_ice', ICE_COUNT - 3, 'img/ice1.png');
-            addItem('ice', SMALL_ICE_COUNT, 'img/ice2.png');
-            break;
+            // BEAR_COUNTS = BEAR_COUNT * 2;
 
-        case 5:
-            BEAR_COUNTS = BEAR_COUNT * 2;
-            addItem('shaking_bear', BEAR_COUNT, 'img/main_bear.png');
-            addItem('ice', ICE_COUNT, 'img/ice2.png');
-            addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('small_moving_ice', SMALL_ICE_COUNT, 'img/ice5.png');
+            addItem('ice', 4, 'img/ice2.png');
+            addItem('bear', BEAR_COUNTS, 'img/main_bear.png');
+            addItem('random_ice', LESS_ICE_COUNT, 'img/ice1.png');
             break;
 
         case 6:
+            BEAR_COUNTS = 5;
+            addItem('ice', SMALL_ICE_COUNT, 'img/ice2.png');
+            addItem('bear', 2, 'img/main_bear.png');
+            addItem('slide_bear', 3, 'img/bear4.png');
+            addItem('random_ice', LESS_ICE_COUNT, 'img/ice1.png');
 
-            BEAR_COUNTS = BEAR_COUNT * 2;
-            addItem('bear', BEAR_COUNT, 'img/main_bear.png');
-            addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('big_ice', ICE_COUNT, 'img/ice1.png');
-            addItem('small_moving_ice', SMALL_ICE_COUNT, 'img/ice3.png');
             break;
 
+        case 5:
+            BEAR_COUNTS = 6;
+            // addItem('shaking_bear', 3, 'img/main_bear.png');
+            addItem('ice', SMALL_ICE_COUNT, 'img/ice2.png');
+            addItem('bear', BEAR_COUNTS, 'img/bear4.png');
+            addItem('small_moving_ice', LESS_ICE_COUNT, 'img/ice5.png');
+            break;
+
+        // case 7:
+
+        //     BEAR_COUNTS = 8;
+        //     addItem('bear', 4, 'img/main_bear.png');
+        //     addItem('bear', 4, 'img/bear4.png');
+        //     addItem('ice', 2, 'img/ice1.png');
+        //     addItem('small_moving_ice', 4, 'img/ice3.png');
+        //     break;
+
         case 7:
-            SET_GAME_SEC = 10;
+            SET_GAME_SEC = 8;
             BEAR_COUNTS = 5;
-            addItem('slide_bear', BEAR_COUNT, 'img/main_bear.png');
-            addItem('ice', ICE_COUNT, 'img/ice3.png');
-            addItem('ice', LESS_ICE_COUNT, 'img/ice5.png');
+
+            addItem('small_ice', SMALL_ICE_COUNT, 'img/ice3.png');
+            addItem('ice', SMALL_ICE_COUNT, 'img/ice5.png');
+            addItem('shaking_bear', BEAR_COUNT, 'img/main_bear.png');
             break;
 
         case 8:
-            addItem('moving_ice', LESS_ICE_COUNT, 'img/ice1.png');
+            SET_GAME_SEC = 8;
+            BEAR_COUNTS = 5;
+            addItem('small_ice', SMALL_ICE_COUNT, 'img/ice5.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('ice', ICE_COUNT, 'img/ice5.png');
+            addItem('moving_ice', LESS_ICE_COUNT, 'img/ice1.png');
+
             break;
 
         case 9:
-            BEAR_COUNTS = BEAR_COUNT * 2;
+            SET_GAME_SEC = 8;
+            BEAR_COUNTS = 5;
+            addItem('small_ice', SMALL_ICE_COUNT, 'img/ice2.png');
             addItem('bear', BEAR_COUNTS, 'img/main_bear.png');
-            addItem('ice', SMALL_ICE_COUNT, 'img/ice2.png');
             addItem('random_ice', SMALL_ICE_COUNT, 'img/ice1.png');
             break;
 
         case 10:
-            BEAR_COUNTS = BEAR_COUNT * 2;
-
+            BEAR_COUNTS = 8;
             addItem('random_ice', ICE_COUNT - 3, 'img/ice1.png');
-            addItem('slide_bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('ice', SMALL_ICE_COUNT, 'img/ice2.png');
-            addItem('bear', BEAR_COUNT, 'img/main_bear.png');
+            addItem('slide_bear', 4, 'img/bear4.png');
+            addItem('mini_ice', ICE_COUNT, 'img/ice2.png');
+            addItem('bear', 4, 'img/main_bear.png');
             break;
 
         case 11:
             BEAR_COUNTS = BEAR_COUNT * 2;
             addItem('shaking_bear', BEAR_COUNT, 'img/main_bear.png');
-            addItem('ice', ICE_COUNT, 'img/ice2.png');
+            addItem('small_ice', ICE_COUNT, 'img/ice2.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
             addItem('small_moving_ice', SMALL_ICE_COUNT, 'img/ice5.png');
             break;
