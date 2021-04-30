@@ -6,9 +6,14 @@
 > html, javascript, css을 활용한 북극곰 살리기 게임 <br /> 
 </span>
 
+## 🎅 developer
 
+ - [장아영](https://github.com/Jang-Ahyoung)<br /> <br /> 
+ 
+## 💙 SITE
 
-[<h4>🏠 <b>homepage</b>](https://github.com/Jang-Ahyoung)</h4>
+[<h4> <b>homepage</b>](https://savethepolarbear.netlify.app/)</h4>
+
 
 ## ✨ Demo 
 <p align="center">
