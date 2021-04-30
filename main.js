@@ -24,7 +24,7 @@ const start = new Audio('./sound/Arrival.mp3');
 
 let SET_GAME_SEC = 15;
 let BEAR_COUNTS = 5;
-let LEVEL = 11;
+let LEVEL = 1;
 let started = false;
 let score = 0;
 let timer = undefined;
@@ -52,17 +52,12 @@ function initGame() {
             break;
 
         case 3:
-            // BEAR_COUNTS = BEAR_COUNT * 2;
-
-            addItem('ice', 4, 'img/ice2.png');
-
-            addItem('ice', LESS_ICE_COUNT, 'img/ice3.png');
             addItem('shaking_bear', BEAR_COUNTS, 'img/main_bear.png');
+            addItem('ice', 4, 'img/ice2.png');
+            addItem('ice', LESS_ICE_COUNT, 'img/ice3.png');
             break;
 
         case 4:
-            // BEAR_COUNTS = BEAR_COUNT * 2;
-
             addItem('ice', 4, 'img/ice2.png');
             addItem('bear', BEAR_COUNTS, 'img/main_bear.png');
             addItem('random_ice', LESS_ICE_COUNT, 'img/ice1.png');
@@ -79,20 +74,10 @@ function initGame() {
 
         case 5:
             BEAR_COUNTS = 6;
-            // addItem('shaking_bear', 3, 'img/main_bear.png');
             addItem('ice', SMALL_ICE_COUNT, 'img/ice2.png');
             addItem('bear', BEAR_COUNTS, 'img/bear4.png');
             addItem('small_moving_ice', LESS_ICE_COUNT, 'img/ice5.png');
             break;
-
-        // case 7:
-
-        //     BEAR_COUNTS = 8;
-        //     addItem('bear', 4, 'img/main_bear.png');
-        //     addItem('bear', 4, 'img/bear4.png');
-        //     addItem('ice', 2, 'img/ice1.png');
-        //     addItem('small_moving_ice', 4, 'img/ice3.png');
-        //     break;
 
         case 7:
             SET_GAME_SEC = 8;
@@ -141,7 +126,7 @@ function initGame() {
 
             addItem('ice', ICE_COUNT, 'img/ice1.png');
             addItem('bear', BEAR_COUNT, 'img/main_bear.png');
-            addItem('big_bear', BEAR_COUNT, 'img/bear4.png');
+            addItem('shaking_bear', BEAR_COUNT, 'img/bear4.png');
             addItem('moving_ice', SMALL_ICE_COUNT, 'img/ice3.png');
             break;
         case 13:
@@ -187,7 +172,7 @@ function initGame() {
             BEAR_COUNTS = BEAR_COUNT * 2;
             addItem('bear', BEAR_COUNT, 'img/main_bear.png');
             addItem('bear', BEAR_COUNT, 'img/bear4.png');
-            addItem('big_ice', ICE_COUNT, 'img/ice1.png');
+            addItem('shaking_bear', ICE_COUNT, 'img/ice1.png');
             addItem('small_moving_ice', SMALL_ICE_COUNT, 'img/ice3.png');
             break;
 
